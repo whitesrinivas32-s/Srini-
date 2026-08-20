@@ -1,210 +1,356 @@
+>
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>S. Srinivasan | Electrical Engineer</title>
-  <link rel="stylesheet" href="portfolio-style.css?v=5.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>S. Srinivasan | Portfolio</title>
+  <style>
+    :root {
+      --bg-color: #0f172a;
+      --card-bg: #1e293b;
+      --accent: #38bdf8;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border: #334155;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-color);
+      color: var(--text-main);
+      line-height: 1.6;
+      padding-bottom: 50px;
+    }
+
+    nav {
+      position: sticky;
+      top: 0;
+      background: rgba(15, 23, 42, 0.9);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 5%;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.2rem;
+      color: var(--accent);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    nav a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    header {
+      padding: 4rem 5% 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header h2 {
+      font-size: 1.25rem;
+      color: var(--accent);
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    header p {
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+      max-width: 800px;
+    }
+
+    .contact-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .contact-info a, .contact-info span {
+      background: var(--card-bg);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      border: 1px solid var(--border);
+      color: var(--text-main);
+      text-decoration: none;
+      font-size: 0.875rem;
+    }
+
+    .contact-info a:hover {
+      border-color: var(--accent);
+    }
+
+    section {
+      max-width: 1000px;
+      margin: 3rem auto;
+      padding: 0 5%;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      color: var(--accent);
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      padding: 1.5rem;
+      border-radius: 8px;
+    }
+
+    .card h3 {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card .meta {
+      font-size: 0.85rem;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+    }
+
+    .card ul {
+      margin-left: 1.2rem;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .card ul li {
+      margin-bottom: 0.5rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .tag {
+      background: #0284c7;
+      color: #fff;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--text-muted);
+      border-top: 1px solid var(--border);
+      margin-top: 4rem;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        display: none;
+      }
+      header h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Navigation Bar -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="#hero" class="logo">S. SRINIVASAN</a>
-      <ul class="nav-links">
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
+  <nav>
+    <h1>S. SRINIVASAN</h1>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+    </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <header id="hero" class="hero-section">
-    <div class="hero-content">
-      <p class="greeting">HELLO, I'M</p>
-      <h1>S. Srinivasan</h1>
-      <h3>Electrical &amp; Electronics Engineer</h3>
-      <p class="hero-desc">
-        Electrical Engineering graduate with manufacturing experience at TVS Motor Company and technical knowledge in Electrical CAD, Power Electronics, MATLAB/Simulink, Arduino, and Industrial Automation.
-      </p>
-      
-      <div class="hero-buttons">
-        <a href="#projects" class="btn primary-btn">View Projects</a>
-        <a href="#contact" class="btn secondary-btn">Contact Me</a>
-      </div>
-
-      <div class="hero-stats">
-        <div class="stat-item">
-          <strong>2+</strong>
-          <span>Years Experience</span>
-        </div>
-        <div class="stat-item">
-          <strong>4</strong>
-          <span>Projects</span>
-        </div>
-        <div class="stat-item">
-          <strong>BE</strong>
-          <span>Electrical</span>
-        </div>
-      </div>
+  <header id="about">
+    <h1>S. SRINIVASAN</h1>
+    <h2>Electrical and Electronics Engineer</h2>
+    <p>
+      Electrical and Electronics Engineering graduate with 2 years of manufacturing experience at TVS Motor Company[cite: 74]. 
+      Experienced in production operations, engine assembly, quality control, defect identification, root cause analysis, 
+      Lean Manufacturing, 5S, Kaizen, IATF 16949, ISO 45001, and QCD[cite: 75].
+    </p>
+    <div class="contact-info">
+      <span>📍 Vellore, Tamil Nadu</span>
+      <span>📞 +91 9361330887</span>
+      <a href="mailto:srinivasan2018deee@gmail.com">✉️ srinivasan2018deee@gmail.com</a>
+      <a href="https://www.linkedin.com/in/srinivasan-s-330470219" target="_blank">🔗 LinkedIn Profile</a>
     </div>
   </header>
 
-  <!-- About Section -->
-  <section id="about" class="section">
-    <h2 class="section-title">About Me</h2>
-    <p>
-      I am an Electrical and Electronics Engineering graduate with 2 years of manufacturing experience at TVS Motor Company. My experience includes production operations, engine assembly, quality control, defect identification, and root cause analysis.
-    </p>
-    <p>
-      I have practical knowledge of Lean Manufacturing, 5S, Kaizen, IATF 16949, ISO 45001, and QCD practices. I am seeking entry-level opportunities in Electrical CAD, Electrical Design, Maintenance, Power Electronics, Quality, or Automation Engineering.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="section bg-light">
-    <h2 class="section-title">Technical Skills</h2>
-    <div class="skills-grid">
-      <div class="skill-card">
-        <i class="fa-solid fa-bolt skill-icon"></i>
-        <h3>Electrical &amp; CAD</h3>
-        <p>Electrical CAD, AutoCAD, Electrical Schematics, CAD Drafting, Power Distribution, Transformers, Switchgear, Circuit Breakers, Maintenance.</p>
+  <section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Electrical & CAD</h3>
+        <p class="meta">Design & Maintenance</p>
+        <div class="tags">
+          <span class="tag">Electrical CAD</span>
+          <span class="tag">AutoCAD</span>
+          <span class="tag">CAD Drafting</span>
+          <span class="tag">Schematics</span>
+          <span class="tag">Transformers</span>
+          <span class="tag">Switchgear</span>
+          <span class="tag">Circuit Breakers</span>
+        </div>
       </div>
-      <div class="skill-card">
-        <i class="fa-solid fa-microchip skill-icon"></i>
-        <h3>Power Electronics &amp; Automation</h3>
-        <p>Inverters, Converters, PWM/SPWM, MPPT, Motor Control, Motor Drives, Control Circuits, Ladder Diagrams, Industrial Automation.</p>
+      <div class="card">
+        <h3>Power Electronics & Automation</h3>
+        <p class="meta">Control & Analysis</p>
+        <div class="tags">
+          <span class="tag">Inverters</span>
+          <span class="tag">Converters</span>
+          <span class="tag">SPWM</span>
+          <span class="tag">MPPT</span>
+          <span class="tag">Motor Drives</span>
+          <span class="tag">THD</span>
+          <span class="tag">Power Quality</span>
+        </div>
       </div>
-      <div class="skill-card">
-        <i class="fa-solid fa-code skill-icon"></i>
-        <h3>Software &amp; Tools</h3>
-        <p>MATLAB/Simulink, Arduino Programming, MS Office.</p>
-      </div>
-      <div class="skill-card">
-        <i class="fa-solid fa-industry skill-icon"></i>
-        <h3>Manufacturing &amp; Quality</h3>
-        <p>Production Operations, Quality Control, Root Cause Analysis, SOP, QCD, Lean Manufacturing, 5S, Kaizen, Inspection.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experience Section -->
-  <section id="experience" class="section">
-    <h2 class="section-title">Professional Experience</h2>
-    <div class="timeline">
-      <div class="timeline-item">
-        <div class="timeline-marker"></div>
-        <div class="timeline-content">
-          <h3>Engine Assembly Operator - NEEM Trainee</h3>
-          <h4>TVS Motor Company Limited, Hosur</h4>
-          <span class="timeline-date">September 2021 – August 2023</span>
-          <ul>
-            <li>Performed two-wheeler engine assembly on a high-volume production line while meeting quality, productivity, and safety requirements.</li>
-            <li>Consistently achieved 850+ units per shift following SOP and QCD requirements.</li>
-            <li>Worked according to IATF 16949 quality standards and participated in product inspection and defect identification.</li>
-            <li>Supported root cause analysis, quality improvement, and manufacturing process improvement activities.</li>
-            <li>Applied Lean Manufacturing, 5S, and Kaizen to improve workplace organization and productivity.</li>
-            <li>Followed ISO 45001 safety practices and participated in KYT activities.</li>
-          </ul>
+      <div class="card">
+        <h3>Software & Manufacturing</h3>
+        <p class="meta">Tools & Standards</p>
+        <div class="tags">
+          <span class="tag">MATLAB/Simulink</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Lean Manufacturing</span>
+          <span class="tag">5S</span>
+          <span class="tag">Kaizen</span>
+          <span class="tag">IATF 16949</span>
+          <span class="tag">ISO 45001</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section bg-light">
-    <h2 class="section-title">Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
+  <section id="experience">
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>Engine Assembly Operator - NEEM Trainee</h3>
+      <div class="meta">TVS Motor Company Limited, Hosur | Sept 2021 – Aug 2023</div>
+      <ul>
+        <li>Performed two-wheeler engine assembly on a high-volume production line while meeting quality, productivity, and safety standards[cite: 83, 86].</li>
+        <li>Consistently achieved 850+ units per shift while following SOP and QCD requirements[cite: 87].</li>
+        <li>Worked according to IATF 16949 quality standards and participated in product inspection and defect identification[cite: 88].</li>
+        <li>Supported root cause analysis, quality improvement, and manufacturing process improvement activities[cite: 89].</li>
+        <li>Applied Lean Manufacturing, 5S, and Kaizen to improve workplace organization and productivity[cite: 90].</li>
+        <li>Followed ISO 45001 safety practices and participated in KYT (Kiken Yochi Training) activities[cite: 91].</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="grid">
+      <div class="card">
         <h3>Smart Warehouse Conveyor System</h3>
-        <span class="project-tag">Electrical CAD</span>
-        <p>Designed power and control circuit diagrams for a 3-phase conveyor system featuring motor start/stop, emergency stop, overload protection, barcode scanner, photoelectric sensor, and pneumatic reject mechanism. Prepared BOM and control documentation.</p>
+        <div class="meta">Electrical CAD Training Project</div>
+        <ul>
+          <li>Designed power and control circuit diagrams for a three-phase conveyor system using AutoCAD/Electrical CAD[cite: 104].</li>
+          <li>Developed ladder/control circuits for motor start/stop, emergency stop, overload protection, and reset[cite: 105].</li>
+          <li>Integrated MCCB, contactor, overload relay, sensors, barcode scanner, and pneumatic components[cite: 106].</li>
+          <li>Prepared Bill of Materials (BOM) and complete electrical control documentation[cite: 107].</li>
+        </ul>
       </div>
 
-      <div class="project-card">
-        <h3>Dual Three-Level Quasi-Z-Source Converter</h3>
-        <span class="project-tag">MATLAB / Simulink</span>
-        <p>Simulated an indirect matrix converter for motors with open-ended windings. Analyzed voltage gain, THD, motor-drive efficiency, and power quality under varying conditions.</p>
+      <div class="card">
+        <h3>Dual 3-Level Quasi-Z-Source Converter</h3>
+        <div class="meta">Academic Project</div>
+        <ul>
+          <li>Designed and simulated indirect matrix converter for motors with open-ended windings using MATLAB/Simulink[cite: 108].</li>
+          <li>Analyzed voltage gain, THD, motor-drive efficiency, and power quality under operating conditions[cite: 109].</li>
+        </ul>
       </div>
 
-      <div class="project-card">
+      <div class="card">
         <h3>MPPT Solar Charge Controller</h3>
-        <span class="project-tag">Arduino &amp; Renewable Energy</span>
-        <p>Developed an Arduino-based MPPT solar charge controller featuring real-time voltage/current monitoring to evaluate battery charging efficiency.</p>
+        <div class="meta">Academic Project</div>
+        <ul>
+          <li>Developed an Arduino-based MPPT solar charge controller[cite: 112].</li>
+          <li>Implemented real-time voltage/current monitoring to analyze battery charging efficiency[cite: 113].</li>
+        </ul>
       </div>
 
-      <div class="project-card">
-        <h3>Automatic Street Light Control</h3>
-        <span class="project-tag">Automation</span>
-        <p>Designed an automatic street lighting control system using light sensors to reduce energy consumption.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education Section -->
-  <section id="education" class="section">
-    <h2 class="section-title">Education &amp; Training</h2>
-    <div class="education-grid">
-      <div class="edu-column">
-        <h3>Education</h3>
-        <div class="edu-item">
-          <h4>B.E. - Electrical and Electronics Engineering</h4>
-          <p>Thanthai Periyar Government Institute of Technology, Vellore (Anna University)</p>
-          <span>CGPA: 7.4 | Expected Graduation: 2026</span>
-        </div>
-        <div class="edu-item">
-          <h4>Diploma - Electrical and Electronics Engineering</h4>
-          <p>TPEVR Government Polytechnic College, Vellore</p>
-          <span>DOTE: 87% | Year of Completion: 2021</span>
-        </div>
-        <div class="edu-item">
-          <h4>HSC</h4>
-          <p>Government Higher Secondary School, Jangalapalli, Vellore</p>
-          <span>57.8% | Year of Completion: 2018</span>
-        </div>
-        <div class="edu-item">
-          <h4>SSLC</h4>
-          <p>Government Higher Secondary School, Jangalapalli, Vellore</p>
-          <span>82.6% | Year of Completion: 2016</span>
-        </div>
-      </div>
-
-      <div class="edu-column">
-        <h3>Certifications &amp; Training</h3>
-        <div class="edu-item">
-          <h4>Proficient in Electrical CAD</h4>
-          <p>Certificate of Completion focused on CAD-based electrical drawing and drafting skills.</p>
-        </div>
-        <div class="edu-item">
-          <h4>In-Plant Training - TNEB, Vellore</h4>
-          <p>Special Maintenance Division: Gained exposure to power distribution systems, transformers, switchgear, circuit breakers, preventive maintenance, and fault diagnosis.</p>
-        </div>
+      <div class="card">
+        <h3>Automatic Street Light Control System</h3>
+        <div class="meta">Academic Project</div>
+        <ul>
+          <li>Designed an automatic street lighting system using light sensors to optimize energy consumption[cite: 110, 111].</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
-  <section id="contact" class="section bg-light">
-    <h2 class="section-title">Contact</h2>
-    <div class="contact-links">
-      <p><strong>Location:</strong> Vellore, Tamil Nadu</p>
-      <p><strong>Email:</strong> <a href="mailto:srinivasan2018deee@gmail.com">srinivasan2018deee@gmail.com</a></p>
-      <p><strong>Phone:</strong> <a href="tel:9361330887">9361330887</a></p>
-      <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/srinivasan-s-330470219" target="_blank">View LinkedIn Profile</a></p>
+  <section id="education">
+    <h2>Education & Certifications</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>B.E. - Electrical & Electronics Engineering</h3>
+        <div class="meta">Thanthai Periyar Government Institute of Technology, Vellore | 2026</div>
+        <p>Anna University | CGPA: 7.4 [cite: 93, 95]</p>
+      </div>
+
+      <div class="card">
+        <h3>Diploma - Electrical & Electronics Engineering</h3>
+        <div class="meta">TPEVR Government Polytechnic College, Vellore | 2021</div>
+        <p>DOTE: 87% [cite: 96, 97, 100]</p>
+      </div>
+
+      <div class="card">
+        <h3>Certifications & Industry Exposure</h3>
+        <div class="meta">Training Programs</div>
+        <ul>
+          <li><strong>Electrical CAD:</strong> Certificate of Completion in CAD drawing and drafting[cite: 115].</li>
+          <li><strong>TNEB In-Plant Training:</strong> Special Maintenance Division, Vellore (Distribution, Switchgear, Maintenance, and Safety)[cite: 116].</li>
+        </ul>
+      </div>
     </div>
   </section>
 
   <footer>
-    <p>&copy; 2026 S. Srinivasan. All rights reserved.</p>
+    <p>© S. Srinivasan. Built for ATS & Web Showcase.</p>
   </footer>
 
-  <script src="script.js"></script>
 </body>
 </html>
